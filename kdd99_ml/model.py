@@ -24,19 +24,19 @@ class model:
 
     def start(self, name="Gaussian Naive Bayes Model", model=gnb):
         print("--------- " + name + " ----------")
-        # Training GNB
+        # Training
         start_time = time.time()
         model.fit(self.X_train, self.y_train.values.ravel())
         end_time = time.time()
         print("Training time: ", end_time - start_time)
 
-        #Testing GNB
+        #Testing
         start_time = time.time()
         y_test_pred = model.predict(self.X_train)
         end_time = time.time()
         print("Testing time: ", end_time - start_time)
 
-        # GNB test and train scores
+        # Test and train scores
         print("Train score is:", model.score(self.X_train, self.y_train))
         print("Test score is:", model.score(self.X_test, self.y_test))
 
