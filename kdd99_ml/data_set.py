@@ -8,8 +8,8 @@ from config import config
 
 """ The path to store the kdd dataset """
 kddcup_99_data_path = [
-    "dataset/kddcup.data_10_percent.gz",
-    "dataset/kddcup.data.gz"
+    "../dataset/kddcup.data_10_percent.gz",
+    "../dataset/kddcup.data.gz"
 ]
 
 
