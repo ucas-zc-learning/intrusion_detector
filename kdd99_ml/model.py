@@ -17,9 +17,9 @@ class model:
     """ initial(construct) """
     def __init__(self):
         self.dataset = DataSet()
-        self.dataset.load_dataset(0)
+        self.dataset.load_dataset(0, 2)
         self.dataset.pre_process()
-        self.X_train, self.X_test, self.y_train, self.y_test = self.dataset.split_train_test(0.2, 42)
+        self.X_train, self.X_test, self.y_train, self.y_test = self.dataset.split_train_test()
 
 
     def start(self, name="Gaussian Naive Bayes Model", model=gnb):

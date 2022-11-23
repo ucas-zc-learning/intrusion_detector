@@ -10,28 +10,45 @@ dst_host_srv_diff_host_rate,dst_host_serror_rate,dst_host_srv_serror_rate,dst_ho
 """ The type of attacks """
 attacks_types = {
     'normal': 'normal',
+    'ipsweep': 'probe',
+    'mscan': 'probe',
+    'nmap': 'probe',
+    'portsweep': 'probe',
+    'saint': 'probe',
+    'satan': 'probe',
+    'apache2': 'dos',
     'back': 'dos',
+    'land': 'dos',
+    'mailbomb': 'dos',
+    'neptune': 'dos',
+    'pod': 'dos',
+    'processtable': 'dos',
+    'smurf': 'dos',
+    'teardrop': 'dos',
+    'udpstorm': 'dos',
     'buffer_overflow': 'u2r',
+    'httptunnel': 'u2r',
+    'loadmodule': 'u2r',
+    'perl': 'u2r',
+    'ps': 'u2r',
+    'rootkit': 'u2r',
+    'sqlattack': 'u2r',
+    'xterm': 'u2r',
     'ftp_write': 'r2l',
     'guess_passwd': 'r2l',
     'imap': 'r2l',
-    'ipsweep': 'probe',
-    'land': 'dos',
-    'loadmodule': 'u2r',
     'multihop': 'r2l',
-    'neptune': 'dos',
-    'nmap': 'probe',
-    'perl': 'u2r',
+    'named': 'r2l',
     'phf': 'r2l',
-    'pod': 'dos',
-    'portsweep': 'probe',
-    'rootkit': 'u2r',
-    'satan': 'probe',
-    'smurf': 'dos',
+    'sendmail': 'r2l',
+    'snmpgetattack': 'r2l',
+    'snmpguess': 'r2l',
     'spy': 'r2l',
-    'teardrop': 'dos',
     'warezclient': 'r2l',
     'warezmaster': 'r2l',
+    'worm': 'r2l',
+    'xlock': 'r2l',
+    'xsnoop': 'r2l',
 }
 
 """ Protocol value mapping """
@@ -39,3 +56,6 @@ pmap = {'icmp':0,'tcp':1,'udp':2}
 
 """ flag feature mapping """
 fmap = {'SF':0,'S0':1,'REJ':2,'RSTR':3,'RSTO':4,'SH':5 ,'S1':6 ,'S2':7,'RSTOS0':8,'S3':9 ,'OTH':10}
+
+""" attack type feature mapping """
+amap = {'dos':0,'normal':1,'probe':2,'r2l':3,'u2r':4}
